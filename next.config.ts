@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
+import "./src/env/server";
+import "./src/env/client";
+
 const nextConfig: NextConfig = {
-  /* config options here */
+  experimental: {
+    authInterrupts: true,
+  },
 };
 
 export default nextConfig;
